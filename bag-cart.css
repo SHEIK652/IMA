@@ -1,0 +1,391 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #784BA0;
+    color: white;
+    padding: 0.3em 0;
+    font-size: small;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+   
+}
+
+.nav .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.nav nav ul {
+    list-style: none;
+    display: flex;
+
+    
+}
+
+.nav nav ul li {
+    margin-left: -30px;
+}
+
+.nav nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav nav ul li a:hover {
+    color: #ddd;
+}
+
+.cart {
+    position: relative;
+}
+
+#cart-count {
+    background-color: #e60000;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    position: absolute;
+    top: -10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveToCart {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(100vw - 50px), -100vh);
+        opacity: 0;
+    }
+}
+
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.product-details {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.product-details h1 {
+    margin-bottom: 0.5em;
+}
+
+.product-details .price {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 1em;
+}
+
+.product-details .description {
+    margin-bottom: 1.5em;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.quantity-button {
+    background-color: #784BA0;
+    color: white;
+    border: none;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-button:hover {
+    background-color: #555;
+}
+
+.add-to-cart {
+    padding: 0.75em 1.5em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+.product-features, .product-specifications, .customer-reviews, .related-products {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.product-features h2, .product-specifications h2, .customer-reviews h2, .related-products h2 {
+    margin-bottom: 1em;
+}
+
+.product-features ul {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+.product-specifications table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-specifications th, .product-specifications td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.customer-reviews .review {
+    margin-bottom: 1em;
+}
+
+.related-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.related-products .related-product {
+    text-align: center;
+}
+
+.related-products .related-product img {
+    max-width: 80%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+ /* Existing CSS */
+ footer {
+    color: white;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+.footer-content {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px; /* Increased margin for spacing between sections */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px; /* Increased margin for spacing */
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Increased margin for spacing between list items */
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 30px; /* Increased gap between icons */
+}
+
+.footer-icons a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between icon and text */
+}
+
+.footer-rights {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased gap between text and payment icons */
+}
+
+.payment-icons img {
+    width: 40px;
+    margin-left: 15px; /* Increased margin for spacing between icons */
+}
+
+.footer-rights p {
+    margin: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap; /* Allow the sections to wrap on smaller screens */
+        padding: 0 20px; /* Reduce padding for smaller screens */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .footer-section {
+        flex: 100%; /* Make each section take full width */
+        margin: 10px 0; /* Adjust margin to create space between sections */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .footer-icons {
+        margin-bottom: 10px; /* Add margin below icons */
+    }
+
+    .footer-rights {
+        flex-direction: column; /* Stack text and payment icons */
+        align-items: flex-start; /* Align items to the start */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .payment-icons img {
+        margin-left: 0; /* Remove left margin */
+    }
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Modal content for smaller screens */
+    #cart-modal .modal-content {
+        width: 90%; /* Increase modal content width */
+        margin: 30% auto; /* Adjust margin to make it vertically centered on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    /* Button adjustments for mobile */
+    .order-button, .remove-item {
+        width: 100%; /* Make buttons full width for easy tapping */
+        font-size: 1.2rem; /* Increase font size for readability */
+        padding: 12px; /* Increase padding for touch areas */
+    }
+
+    /* Cart item styles for mobile */
+    .cart-item {
+        padding: 15px; /* Increase padding for better touch experience */
+        font-size: 1.1rem; /* Increase font size */
+        margin: 10px 0; /* Adjust margins for compactness */
+    }
+
+    /* Adjust font sizes in modal */
+    h2 {
+        font-size: 1.8rem; /* Adjust the modal header font size */
+    }
+
+    /* Product details adjustments */
+    #price, #quantity {
+        font-size: 1.2rem; /* Make text larger for easier reading on mobile */
+    }
+
+    /* Reduce the size of close button */
+    #cart-modal .close {
+        font-size: 24px; /* Slightly smaller close button */
+    }
+}

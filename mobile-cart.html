@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>IMA</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bbc5b36f1a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <nav style="margin-left: -20px;">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="help.html">Help</a></li>
+                    <li class="cart" >
+                        <a href="#">
+                            <i class="fas fa-shopping-cart" class="icon"></i>
+                            <span id="cart-count" >0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="-original-imagtc5fqyz8tu4c.webp" alt="mobile" id="product-image">
+            </div>
+            <div class="product-details">
+                <h2>Apple iPhone 15 (Green, 128 GB)</h2>
+                <p class="price" id="price"><b>₹ 54199</b></p>
+                <h5>Available offers</h5>
+
+                  Bank OfferFlat ₹500 off on HDFC Bank Credit Card EMI Txns, Tenure: 6 and 9 months, Min Txn Value: ₹7,500T&C<br>
+                  
+                  Bank OfferFlat ₹750 off on HDFC Bank Credit Card EMI Txns, Tenure: 12 months, Min Txn Value: ₹7,500T&C<br>
+                  
+                  Bank Offer10% off up to ₹1000 on HDFC Bank Credit Card EMI Txns,Tenure: 18 and 24 months,Min Txn Value: ₹7,500T&C<br>
+                  
+                  Special PriceGet extra ₹7901 off (price inclusive of cashback/coupon)T&C</h5>
+                <p class="description">
+                    <b style="font-family: Georgia, 'Times New Roman', Times, serif;">Highlights</b><br>
+                    128 GB ROM
+                    15.49 cm (6.1 inch) Super Retina XDR Display
+                    48MP + 12MP | 12MP Front Camera
+                    A16 Bionic Chip, 6 Core Processor <br><br> 
+                    <b style="font-family: Georgia, 'Times New Roman', Times, serif;">Easy Payment Options</b><br>
+                    No cost EMI starting from ₹5,834/month
+                     Cash on Delivery
+                    Net banking & Credit/ Debit/ ATM card<br>
+                <div class="quantity-controls">
+                    <button class="quantity-button" id="decrease-quantity">-</button>
+                    <span id="quantity" style="margin-left: 12px;">1</span>
+                    <button class="quantity-button" id="increase-quantity">+</button>
+                </div>
+                <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div id="animation-container"></div>
+        <div class="product-features">
+            <h2>Product Features</h2>
+            <ul>
+                <li> In The Box: Handset, USB C Charge Cable (1m), Documentation</li>
+                <li>Model Number: MTP53HN/A</li>
+                <li>Model Name:  iPhone 15</li>
+                <li>Color  : Green</li>
+                <li>Browse Type: Smartphones </li>
+                <li>Extended Warranty 1 Year</li>
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h2>Specifications</h2>
+            <table>
+                <tr>
+                    <th>Display Size</th>
+                    <td>15.49 cm (6.1 inch)</td>
+                </tr>
+                <tr>
+                    <th>Processor Type</th>
+                    <td>A16 Bionic Chip, 6 Core Processor  </td>
+                </tr>
+                <tr>
+                    <th>Primary Camera & Secondary Camera</th>
+                    <td>
+                      48MP + 12MP & 
+                      12MP Front Camera</td>
+                </tr>
+                <tr>
+                    <th> Network Type</th>
+                    <td> 5G, 4G VOLTE, 4G, 3G, 2G</td>
+                </tr>
+                <tr>
+                    <th>Water Resistance</th>
+                    <td>50 meters</td>
+                </tr>
+            </table>
+        </div>
+        <div class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p><strong>John Doe</strong> - "Just go for it.Amazing one.Beautiful camera with super fast processor"</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith</strong> - "High quality camera😍"</p>
+            </div>
+        </div>
+        <div class="related-products">
+            <h2>Related Products</h2>
+            <div class="related-product">
+                <img src="pixel-8a-ga04432-in-google-original-imahyn3mqzdbzywg.webp" alt="Related Product 1">
+                <p><b>PIXEL</b></p>
+            </div>
+            <div class="related-product">
+                <img src="-original-imah39xxubqf3rg6.webp" alt="Related Product 2">
+                <p><B>NOTHING</B></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Your Cart</h2>
+          <div id="cart-items"></div>
+          <div id="cart-total">
+              <p><strong>Total Cost: </strong><span id="total-cost">₹0</span></p>
+          </div><br>
+          <a href="products.html" class="order-button">Order Now</a> <!-- Added Order button -->
+      </div>
+    </div>
+ 
+    <footer>
+      <div class="footer-content">
+          <footer>
+              <div class="footer-container">
+                <div class="footer-section">
+                  <h3>ABOUT</h3>
+                  <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">IMA Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>GROUP COMPANIES</h3>
+                  <ul>
+                    <li><a href="#">Myntra</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Shopsy</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>HELP</h3>
+                  <ul>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>CONSUMER POLICY</h3>
+                  <ul>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>Mail Us:</h3>
+                  <address>
+                    IMA Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.
+                  </address>
+                </div>
+                <div class="footer-section">
+                  <h3>Registered Office Address:</h3>
+                  <address>
+                    IMA Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.<br>
+                    CIN : U51109KA2012PTC066107<br>
+                    Telephone: 044-45614700 / 044-67415800
+                  </address>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <div class="footer-icons">
+                  <a href="#" class="icon">Become a Seller</a>
+                  <a href="#" class="icon">Advertise</a>
+                  <a href="#" class="icon">Gift Cards</a>
+                  <a href="#" class="icon">Help Center</a>
+                </div>
+                <div class="footer-rights">
+                  <p>© 2007-2024 IMA.com</p>
+                  <div class="payment-icons">
+                    <img src="visa-credit-card-mastercard-logo-visa-cdr-text-rectangle-thumbnail.png" alt="Visa">
+                    <img src="Mastercard_new_logo-1200x865.webp" alt="MasterCard">
+                    <img src="DISCOVER.png" alt="Discover">
+                    <!-- Add more payment method icons here -->
+                  </div>
+                </div>
+              </div>
+            </footer>
+            
+          <p style="text-align: center;">&copy; 2024 IMA. All rights reserved.</p>
+      </div>
+  </footer>
+
+
+    <script src="mobile.js"></script>
+</body>
+</html>

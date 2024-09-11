@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>IMA</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bbc5b36f1a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+        <nav style="margin-left: -20px;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li class="cart" >
+                    <a href="#">
+                        <i class="fas fa-shopping-cart" class="icon"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="-original-imagtcnuvenczfp8-watch.webp" alt="watch" id="product-image">
+            </div>
+            <div class="product-details">
+                <h3>Apple Watch Ultra 2 GPS + Cellular 49mm Titanium Case with Blue/Black Trail Loop - M/L  (Black Strap, Free Size)</h3>
+                <p class="price" id="price"><b>₹89,900</b></p>
+                <h5>Available offers</h5>
+
+                Bank OfferFlat ₹500 off on HDFC Bank Credit Card EMI Txns, Tenure: 6 and 9 months, Min Txn Value: ₹7,500T&C<br>
+                
+                Special PriceGet extra ₹7901 off (price inclusive of cashback/coupon)T&C</h5>
+                <div class="quantity-controls">
+                    <button class="quantity-button" id="decrease-quantity">-</button>
+                    <span id="quantity" style="margin-left: 12px;">1</span>
+                    <button class="quantity-button" id="increase-quantity">+</button>
+                </div>
+                <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div id="animation-container"></div>
+        <div class="product-features">
+            <h2>Product Features</h2>
+            <ul>
+                <li> Sales Package: Smartwatch, Strap, Magnetic Fast Charging USB-C Cable, User Manual</li>
+                <li>Model Number: MRF63HN/A</li>
+                <li>Model Name: Watch Ultra 2 GPS + Cellular 49mm Titanium Case with Blue/Black Trail Loop - M/L</li>
+                <li>Dial Shape: Rectangle</li>
+                <li>Strap Color:  Black</li>
+                <li>Warranty provided by the Brand/Manufacturer</li>
+            </ul>
+        </div>
+        <div class="product-specifications">
+            <h2>Specifications</h2>
+            <table>
+                <tr>
+                    <th>Display Size</th>
+                    <td>49mm</td>
+                </tr>
+                <tr>
+                    <th>Highlights</th>
+                    <td>The most rugged and capable.<br>
+                      With Call Function<br>
+                      Touchscreen<br>
+                      Fitness & Outdoor<br>
+                      Battery Runtime: Upto 36 hrs</td>
+                </tr>
+                <tr>
+                    <th>Movement</th>
+                    <td>Swiss Quartz</td>
+                </tr>
+                <tr>
+                    <th>Water Resistance</th>
+                    <td>50 meters</td>
+                </tr>
+            </table>
+        </div>
+        <div class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p><strong>John Doe</strong> - "Apple watch Ultra 2 is a beast when it comes to performance and on top of that IMA open box delivery was on point"</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith</strong> - "The product is a beast ! Feels premium and is a head turner"</p>
+            </div>
+        </div>
+        <div class="related-products">
+            <h2>Related Products</h2>
+            <div class="related-product">
+                <img src="-original-imagvzcrwsnxyrge(watch-4).webp" alt="Related Product 1">
+                <p><b>BOAT</b></p>
+            </div>
+            <div class="related-product">
+                <img src="-original-imah2ww3gwagcxn3-watch(1).webp" alt="Related Product 2">
+                <p><B>SAMSUNG</B></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Your Cart</h2>
+          <div id="cart-items"></div>
+          <div id="cart-total">
+              <p><strong>Total Cost: </strong><span id="total-cost">₹0</span></p>
+          </div><br>
+          <a href="products.html" class="order-button">Order Now</a> <!-- Added Order button -->
+      </div>
+    </div>
+ 
+    <footer>
+      <div class="footer-content">
+          <footer>
+              <div class="footer-container">
+                <div class="footer-section">
+                  <h3>ABOUT</h3>
+                  <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">IMA Stories</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>GROUP COMPANIES</h3>
+                  <ul>
+                    <li><a href="#">Myntra</a></li>
+                    <li><a href="#">Cleartrip</a></li>
+                    <li><a href="#">Shopsy</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>HELP</h3>
+                  <ul>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report Infringement</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>CONSUMER POLICY</h3>
+                  <ul>
+                    <li><a href="#">Cancellation & Returns</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                    <li><a href="#">EPR Compliance</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h3>Mail Us:</h3>
+                  <address>
+                    IMA Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.
+                  </address>
+                </div>
+                <div class="footer-section">
+                  <h3>Registered Office Address:</h3>
+                  <address>
+                    IMA Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road, Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.<br>
+                    CIN : U51109KA2012PTC066107<br>
+                    Telephone: 044-45614700 / 044-67415800
+                  </address>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <div class="footer-icons">
+                  <a href="#" class="icon">Become a Seller</a>
+                  <a href="#" class="icon">Advertise</a>
+                  <a href="#" class="icon">Gift Cards</a>
+                  <a href="#" class="icon">Help Center</a>
+                </div>
+                <div class="footer-rights">
+                  <p>© 2007-2024 IMA.com</p>
+                  <div class="payment-icons">
+                    <img src="visa-credit-card-mastercard-logo-visa-cdr-text-rectangle-thumbnail.png" alt="Visa">
+                    <img src="Mastercard_new_logo-1200x865.webp" alt="MasterCard">
+                    <img src="DISCOVER.png" alt="Discover">
+                    <!-- Add more payment method icons here -->
+                  </div>
+                </div>
+              </div>
+            </footer>
+            
+          <p style="text-align: center;">&copy; 2024 IMA. All rights reserved.</p>
+      </div>
+  </footer>
+
+
+    <script src="watch.js"></script>
+</body>
+</html>

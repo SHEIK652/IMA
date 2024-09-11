@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="register.css">
+  <title>IMA</title>
+  <!--font awesome-->
+  <script src="https://kit.fontawesome.com/bbc5b36f1a.js" crossorigin="anonymous"></script>
+  <script type="module" src="register.js" defer></script>
+</head>
+<body>
+            <!-- Error Message Container -->
+<div id="error-message-container" class="hidden">
+    <div class="error-message-content">
+        <span id="error-message-text"></span>
+        <button id="error-message-close-btn">x</button>
+    </div>
+</div>
+   <!-- Custom Alert Container -->
+   <div id="custom-alert" class="custom-alert hidden">
+    <div class="custom-alert-content">
+        <span id="alert-message"></span>
+        <button id="alert-close-btn">Close</button>
+    </div>
+</div>
+        
+    <input type="radio" name="theme" id="deep-purple" checked="checked">
+    <input type="radio" name="theme" id="gold">
+    <input type="radio" name="theme" id="space-black">
+    <input type="radio" name="theme" id="silver">
+
+    <div class="phone">
+        
+        
+        <div class="buttons">
+            <div class="left">
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+            </div>
+            <div class="right">
+                <div class="button"></div>
+            </div>
+        </div>
+        <div class="camera"></div>
+        <div class="screen-container">
+            <div class="bg deep-purple">
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+            </div>
+            <div class="bg gold">
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+            </div>
+            <div class="bg space-black">
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+            </div>
+            <div class="bg silver">
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+                <div class="section">
+                    <div class="glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="notch-container">
+            <div class="notch">
+                <div class="container">
+                    <div class="left">
+                        <div class="title"></div>
+                        <div class="text"></div>
+                    </div>
+                    <div class="right">
+                        <div class="bar">
+                            <div class="duration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notch-blur"></div>
+            </div>
+        </div>
+        <div class="palette">
+            <label for="deep-purple" class="swatch"></label>
+            <label for="gold" class="swatch"></label>
+            <label for="space-black" class="swatch"></label>
+            <label for="silver" class="swatch"></label>
+        </div>
+        <div class="login-container">
+            <header>
+              <h1 class="login">Sign In</h1>
+            </header>
+            <form action="register.html" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" name="username" id="username" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+              </div>
+              <div class="form-group">
+                <input type="comfirm-password" class="form-control" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
+              </div>
+              <div class="form-group">
+                <a href="login.html">Already have an account? Sign In</a>
+              </div>
+              <button type="submit" class="btn btn-primary signin" id="submit">Register<i class="fa-solid fa-user" style="margin-left: 10px;"></i></button>
+            </form>
+            <form action="google-register" method="post">
+              <button type="submit" class="btn btn-danger google">Register In Google <i class="fa-brands fa-google" style="margin-left: 10px;"></i></button>
+            </form>
+            <form action="mobile-register" method="post">
+              <button type="submit" class="btn btn-secondary mobile">Register In Mobile <i class="fa-solid fa-mobile" style="margin-left: 10px;"></i></button>
+            </form>
+          </div>
+
+          <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+          <script src="register.js"></script>
+  
+</body>
+</html>

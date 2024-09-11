@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(to right top, #080607, #141113, #1b191c, #222125, #28292f, #272a31, #262c32, #252d33, #1e282c, #192224, #141c1d, #0f1716); 
+
+   
+
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+.mobile-menu {
+    position: relative;
+    right: 2%;
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 10;
+    background-color: #333;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu a {
+    text-align: center;
+    padding: 15px;
+    color: #eee;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #784BA0;
+    color: #ffffff;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+
+.my-video-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    top: 40px;
+    overflow: hidden;
+    border: 3px solid #fff; /* Change this to the color you prefer */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.my-video-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+.my-video-slide {
+    min-width: 100%; /* Each video slide takes the full width of the carousel */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.my-video-slide video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Ensures videos have rounded corners to match the container */
+}
+
+.my-image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    top: 50px;
+    overflow: hidden;
+    border: 3px solid #fff; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.my-image-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+}
+
+.my-image-slide {
+    min-width: 100%; /* Full width for each image slide */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.my-image-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Styling for cart items */
+.cart-items {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.cart-item {
+    background-color: #323348;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.cart-item:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.remove-item {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.remove-item:hover {
+    background-color: #ff4b4b;
+}
+
+/* Total cost section */
+.total-cost {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #28293e;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar for cart items */
+.cart-items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background-color: #ff6b6b;
+    border-radius: 5px;
+}
+
+ /* Existing CSS */
+ footer {
+    color: #fff;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+.footer-content {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px; /* Increased margin for spacing between sections */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px; /* Increased margin for spacing */
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Increased margin for spacing between list items */
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 30px; /* Increased gap between icons */
+}
+
+.footer-icons a {
+    color:#fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between icon and text */
+}
+
+.footer-rights {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased gap between text and payment icons */
+}
+
+.payment-icons img {
+    width: 40px;
+    margin-left: 15px; /* Increased margin for spacing between icons */
+}
+
+.footer-rights p {
+    margin: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap; /* Allow the sections to wrap on smaller screens */
+        padding: 0 20px; /* Reduce padding for smaller screens */
+        margin-top: 160px; /* Adjust margin */
+    }
+
+    .footer-section {
+        flex: 100%; /* Make each section take full width */
+        margin: 10px 0; /* Adjust margin to create space between sections */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .footer-icons {
+        margin-bottom: 10px; /* Add margin below icons */
+    }
+
+    .footer-rights {
+        flex-direction: column; /* Stack text and payment icons */
+        align-items: flex-start; /* Align items to the start */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .payment-icons img {
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .my-video-carousel {
+        position: relative;
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;
+        top: 40px;
+        overflow: hidden;
+        border: 3px solid #fff; /* Change this to the color you prefer */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    }
+    
+    .my-video-wrapper {
+        display: flex;
+        transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+    }
+    
+    .my-video-slide {
+        min-width: 100%; /* Each video slide takes the full width of the carousel */
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .my-video-slide video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px; /* Ensures videos have rounded corners to match the container */
+    }
+    
+}
